@@ -7,7 +7,7 @@
 :root{
     --mainColor: #2d7df6;
     --secondaryColor: #0d43a6;
-    --thirdColor:#6ba7de;
+    --thirdColor:#88b2da71;
     --pagePadding: 0 2vh;
 }
 p{
@@ -102,9 +102,8 @@ p{
     display: none;
 }
 main{
-    padding: var(--pagePadding);
-    margin-top: 10px;
-    margin-bottom: 60px;
+    padding-top: 10px !important;
+    padding-bottom: 60px !important;
 }
 .navDown{
     /* background-color: #0d43a6; */
@@ -132,6 +131,104 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+.pageMain{
+    padding: var(--pagePadding);
+    background-color: var(--thirdColor);
+}
+.postsContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* align-items: center; */
+    gap: 30px;
+}
+.postBox{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    background-color: white;
+    width: 100%;
+    padding: 5px 0;
+}
+.userIntel{
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* margin-bottom: 5px; */
+}
+.userIntel p{
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.userIntel p:hover{
+    color: var(--mainColor);
+}
+.userIntel img{
+    height: 50px;
+    border-radius: 25px;
+}
+.contentHolder{
+    height: 540px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+.contentHolder img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    
+}
+.postIcons{
+    padding: 5px 10px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+.captionSection{
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: column;
+}
+.captionSection p{
+    font-size: 14px;
+    /* color: #888686dd; */
+    cursor: pointer;
+}
+.postCaption{
+    padding-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.postCaption span{
+    font-size: 14px;
+    font-weight: bold;
+}
+.captionContent{
+    font-size: 14px;
+    font-weight: normal;
+    word-break: break-all;
+}
+.commentsClick{
+    padding: 5px 15px;
+}
+.commentsClick p{
+    color: #888686dd;
+    cursor: pointer;
+    font-size: 14px;
+}
+.createdDate{
+    padding: 0px 15px;
+    font-size: 14px;
 }
 @media only screen and (max-width: 420px){
     .navBar .navLogo img{
