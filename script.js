@@ -7,3 +7,14 @@ array.map(x=>{
     }
     x.textContent=username
 })
+
+
+
+
+const likeBtn=document.querySelectorAll('#likeBtn')
+let likesArray= Array.from(likeBtn)
+for(let i=0;i<likesArray.length;i++){
+    likesArray[i].addEventListener('click',()=>{
+        likesArray[i].style.color='red'
+    })
+}
