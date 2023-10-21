@@ -233,6 +233,235 @@ main{
     padding: 0px 15px;
     font-size: 14px;
 }
+.commentsSection{
+    /* visibility: hidden;
+    opacity: 0; */
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.2s;
+}
+.nonActiveComments{
+    /* display: none !important; */
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+.commentsSectionBox{
+    border-top-left-radius: 40px ;
+    border-top-right-radius: 40px ;
+    height: 70%;
+    width: 100%;
+    background-color:white;
+    position: fixed;
+    bottom: 85px;
+    /* padding: 20px 0px; */
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    /* align-items: center; */
+}
+.commentsHeading{
+    border-top-left-radius: 40px ;
+    border-top-right-radius: 40px ;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+    z-index: 1000000000;
+    position: fixed;
+}
+.commentsHeading i{
+    margin-top: 1.5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.commentPost img{
+    height: 30px;
+    border-radius: 15px;
+}
+.commentPostsContainer{
+    /* background-color: var(--mainColor); */
+    display: flex;
+    flex-direction: column;
+    margin-top: 55px;
+    /* overflow: scroll; */
+    /* gap: 10px; */
+}
+.commentPost{
+    display: flex;
+    width: 100% !important;
+    padding: 5px 40px;
+    /* align-items: start; */
+    /* justify-content: start; */
+    gap: 5px;
+    margin-bottom: 5px;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.555);
+}
+.commentsContent p{
+    word-break: break-all;
+    font-weight: bold;
+    line-height: 35px;
+}
+.commentPost .userData{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.typeInputField{
+    background-color: rgb(255, 255, 255);
+    z-index: 10000;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    gap: 10px;
+    padding: 20px 15px;
+    min-height: 50px;
+}
+
+.typeInputField .inputSection{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0 15px;
+}
+.typeInputField input{
+    width: 94%;
+    height: 45px;
+    padding: 00px 10px;
+    outline: none;
+    background: transparent;
+    border: 1px solid black;
+}
+.typeInputField .inputSection i{
+    font-size: 25px;
+}
+#sendButton{
+    z-index: 100000000000000000000000000000000;
+    cursor: pointer;
+}
+.shareSection{
+    
+    height: 100% ;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: all 0.2s;
+    overflow: auto;
+}
+.nonActiveShare{
+    visibility: hidden;
+    opacity: 0;
+}
+.shareSectionBox img{
+    height: 50px;
+}
+.shareSectionBox{
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    overflow: scroll;
+    height: 70%;
+    width: 100%;
+    position: fixed;
+    bottom: 55px;
+    background-color: white;
+}
+.shareHeading{
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+}
+.shareHeading i{
+    margin-top: 1.5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.shareUsersContainer{
+    overflow: scroll;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    padding: 0 10px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+.shareUserIntel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.leftSide{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+.leftSide img{
+    height: 40px;
+    border-radius: 20px;
+}
+.leftSide p{
+    cursor: pointer;
+}
+.rightSide{
+    display: flex;
+    align-items: center;
+}
+.rightSide i{
+    font-size: 24px;
+    cursor: pointer;
+}
+.sendButtonHolder{
+    /* background-color: rgb(138, 13, 13); */
+    background-color: white;
+    height: 70px;
+    position: fixed;
+    bottom: 55px;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #0d43a6; */
+    width: 100%;
+}
+.sendButtonHolder button{
+    width: 95%;
+    height: 50px;
+    background-color: var(--secondaryColor);
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 18.5px;
+    transition: all 0.3s;
+}
+.sendButtonHolder button:hover{
+    background-color: #2d7df6;
+}
 @media only screen and (max-width: 420px){
     .navBar .navLogo img{
         display: none;
