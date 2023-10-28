@@ -48,19 +48,21 @@ for(let i=0; i<closesComments.length;i++){
     })
 }
 
-const openShare=document.querySelector('#openShare')
-const shareSection=document.querySelector('.shareSection')
-const CloseShare=document.querySelector('#CloseShare')
+const openShare=document.querySelectorAll('#openShare')
+const shareSection=document.querySelectorAll('.shareSection')
+const CloseShare=document.querySelectorAll('#CloseShare')
 const selectShare=document.querySelectorAll('#selectShare')
 let isSelected=false
-openShare.addEventListener('click', ()=>{
-    shareSection.classList.remove('nonActiveShare')
+for(let i=0;i<openShare.length;i++){
+    openShare[i].addEventListener('click', ()=>{
+    shareSection[i].classList.remove('nonActiveShare')
     document.body.style.overflow='hidden'
+    CloseShare[i].addEventListener('click', ()=>{
+        shareSection[i].classList.add('nonActiveShare')
+        document.body.style.overflow='auto'
+    })
 })
-CloseShare.addEventListener('click', ()=>{
-    shareSection.classList.add('nonActiveShare')
-    document.body.style.overflow='auto'
-})
+}
 for(let i=0; i<selectShare.length;i++){
 selectShare[i].addEventListener('click', ()=>{
     if(isSelected==false){
