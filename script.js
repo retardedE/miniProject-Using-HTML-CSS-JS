@@ -74,3 +74,25 @@ selectShare[i].addEventListener('click', ()=>{
     }
 })
 }
+
+const userStory=document.querySelectorAll('.othersStory div')
+const storyFullScreen=document.querySelectorAll('.storyFullScreen')
+const closeStory=document.querySelectorAll('#closeStory')
+let userStoryArray= Array.from(userStory)
+let storyFullScreenArray= Array.from(storyFullScreen)
+let closeStoryArray= Array.from(closeStory)
+console.log(closeStoryArray)
+console.log(storyFullScreenArray)
+console.log(storyFullScreenArray)
+userStoryArray.map(x=>{
+    x.addEventListener('click', ()=>{
+        let index = userStoryArray.indexOf(x);
+        storyFullScreenArray[index].classList.remove('unActiveStory')
+    })
+})
+closeStoryArray.map(x=>{
+    x.addEventListener('click', ()=>{
+        let index = closeStoryArray.indexOf(x);
+        storyFullScreenArray[index].classList.add('unActiveStory')
+    })
+})
