@@ -88,6 +88,7 @@ userStoryArray.map(x=>{
     x.addEventListener('click', ()=>{
         let index = userStoryArray.indexOf(x);
         storyFullScreenArray[index].classList.remove('unActiveStory')
+        
     })
 })
 closeStoryArray.map(x=>{
@@ -96,3 +97,11 @@ closeStoryArray.map(x=>{
         storyFullScreenArray[index].classList.add('unActiveStory')
     })
 })
+
+let postBoxContent=document.querySelectorAll('.postBox .contentHolder button')
+let postBoxContentArray= Array.from(postBoxContent)
+for(let i=0;i<postBoxContentArray.length;i++){
+    postBoxContentArray[i].addEventListener('dblclick',()=>{
+        likesArray[i].style.color='red'
+    })
+}
